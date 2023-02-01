@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    //ROLAR INICIATIVA
     $('#btn-initiative').click(function(){
         let fightersList = [];//Lista de combatentes
         let elementsList = [];//Lista de elementos
@@ -26,6 +27,11 @@ $(document).ready(function(){
         //Mostra/Esconde texto de lista vazia
         if(fighterNum === 0) $('#emptyList').show();//Mostra lista vazia
         else $('#emptyList').hide();//Esconde lista vazia
+    })
+
+    //LIMPAR MINIONS
+    $('#btn-limpar').click(function(){
+        $('#div-minions input:checkbox').prop('checked',false);//Desmarca todas as checkboxes
     })
 
     //Compara as posições dos combatentes
