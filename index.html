@@ -24,6 +24,11 @@
             margin-right: auto;
             width: fit-content;
         }
+        .avatar{width: 85px!important;}
+        button{width: 44%;}
+        @media only screen and (max-width: 600px){
+            .w3-button.w3-xlarge{font-size: large!important;}
+        }
     </style>
 
     <!-- JS -->
@@ -41,27 +46,57 @@
             <section class="w3-margin w3-padding w3-container">
                 <!-- HERÓIS -->
                 <div class="w3-half w3-padding" id="div-heroes">
-                    <h3 class="w3-center">Heróis</h3>
-                    <ul class="w3-large" id="ul-heroes">
-                        <li><input type="checkbox" name="heroes" value="Collin" id="chk-collin">
-                            <label for="chk-collin">Collin</label></li>
-                        <li><input type="checkbox" name="heroes" value="Filch" id="chk-filch">
-                            <label for="chk-filch">Filch</label></li>
-                        <li><input type="checkbox" name="heroes" value="Lilly" id="chk-lilly">
-                            <label for="chk-lilly">Lilly</label></li>
-                        <li><input type="checkbox" name="heroes" value="Maginos" id="chk-maginos">
-                            <label for="chk-maginos">Maginos</label></li>
-                        <li><input type="checkbox" name="heroes" value="Nez" id="chk-nez">
-                            <label for="chk-nez">Nez</label></li>
-                        <li><input type="checkbox" name="heroes" value="Tilda" id="chk-tilda">
-                            <label for="chk-tilda">Tilda</label></li>
+                    <h3 class="w3-center w3-xxlarge">Heróis</h3>
+                    <ul class="w3-xlarge w3-ul" id="ul-heroes">
+                        <li class="w3-bar">
+                            <img src="/src/collin.png" class="w3-bar-item w3-circle avatar" alt="">
+                            <div class="w3-bar-item">
+                                <input type="checkbox" name="heroes" value="Collin" id="chk-collin" class="w3-check">
+                                <label for="chk-collin">Collin</label>
+                            </div>
+                        </li>
+                        <li class="w3-bar">
+                            <img src="/src/filch.png" class="w3-bar-item w3-circle avatar" alt="">
+                            <div class="w3-bar-item">
+                                <input type="checkbox" name="heroes" value="Filch" id="chk-filch" class="w3-check">
+                                <label for="chk-filch">Filch</label>
+                            </div>
+                        </li>
+                        <li class="w3-bar">
+                            <img src="/src/lilly.png" class="w3-bar-item w3-circle avatar" alt="">
+                            <div class="w3-bar-item">
+                                <input type="checkbox" name="heroes" value="Lilly" id="chk-lilly" class="w3-check">
+                                <label for="chk-lilly">Lilly</label>
+                            </div>
+                        </li>
+                        <li class="w3-bar">
+                            <img src="/src/maginos.png" class="w3-bar-item w3-circle avatar" alt="">
+                            <div class="w3-bar-item">
+                                <input type="checkbox" name="heroes" value="Maginos" id="chk-maginos" class="w3-check">
+                                <label for="chk-maginos">Maginos</label>
+                            </div>
+                        </li>
+                        <li class="w3-bar">
+                            <img src="/src/nez.png" class="w3-bar-item w3-circle avatar" alt="">
+                            <div class="w3-bar-item">
+                                <input type="checkbox" name="heroes" value="Nez" id="chk-nez" class="w3-check">
+                                <label for="chk-nez">Nez</label>
+                            </div>
+                        </li>
+                        <li class="w3-bar">
+                            <img src="/src/tilda.png" class="w3-bar-item w3-circle avatar" alt="">
+                            <div class="w3-bar-item">
+                                <input type="checkbox" name="heroes" value="Tilda" id="chk-tilda" class="w3-check">
+                                <label for="chk-tilda">Tilda</label>
+                            </div>
+                        </li>
                     </ul>
                 </div>
 
                 <!-- LACAIOS -->
                 <div class="w3-half w3-padding" id="div-minions">
-                    <h3 class="w3-center">Lacaios</h3>
-                    <ul class="w3-large" id="ul-minions">
+                    <h3 class="w3-center w3-xxlarge">Lacaios</h3>
+                    <ul class="w3-large w3-ul" id="ul-minions">
                         <li><input type="checkbox" name="minions" value="Aranha" id="chk-aranha">
                             <label for="chk-aranha">Aranha</label></li>
                         <li><input type="checkbox" name="minions" value="Baratas" id="chk-baratas">
@@ -93,9 +128,9 @@
             </section>
 
             <!-- BOTÕES -->
-            <div class="w3-center w3-margin">
-                <button class="w3-button w3-blue w3-round-large w3-margin" id="btn-initiative">Rolar iniciativa</button>
-                <button class="w3-button w3-gray w3-round-large w3-margin" id="btn-limpar">Limpar</button>
+            <div class="w3-center w3-block">
+                <button class="w3-button w3-blue w3-round-large w3-padding-large w3-xlarge w3-margin" id="btn-initiative">Rolar iniciativa</button>
+                <button class="w3-button w3-gray w3-round-large w3-padding-large w3-xlarge w3-margin" id="btn-limpar">Limpar</button>
             </div>
         </section>
 
@@ -103,11 +138,14 @@
         <section class="w3-container" id="sec-initiative">
             <div class="w3-card w3-padding initiative">
                 <h2 class="w3-center">Iniciativa</h2>
-                <ol id="ol-initiative"></ol>
+                <ol class="w3-border" id="ol-initiative"></ol>
                 <div id="emptyList" style="text-align: center; margin: 20px;">Lista vazia</div>
             </div>
         </section>
     </main>
-    <footer></footer>
+    <footer class="w3-content w3-blue w3-padding-large w3-center">
+        Jonathan Baliellas - 2023 <br>
+        Powered by <a href="https://mice-and-mystics.fandom.com/wiki/Mice_and_Mystics_Wiki" target="_blank" rel="noopener noreferrer">Mice & Mystics Wiki</a> &copy;
+    </footer>
 </body>
 </html>
