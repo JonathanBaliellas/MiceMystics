@@ -5,50 +5,102 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mice & Mystics WebApp</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        li, label{
+            padding: 0.3rem;
+        }
+        .initiative{
+            margin-left: auto;
+            margin-right: auto;
+            width: 300px;
+            margin-bottom: 50px;
+            margin-top: 50px;
+        }
+        .ol{
+            margin-left: auto;
+            margin-right: auto;
+            width: fit-content;
+        }
+    </style>
+
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script src="script.js"></script>
 </head>
 <body>
-    <header>
+    <header class="w3-center">
         <h1>Mice & Mystics WebApp</h1>
     </header>
     <main>
         <!-- SELEÇÃO DE COMBATENTES -->
-        <section id="sec-fighterSelection">
-            <h2>Seleção de Combatentes</h2>
-            <div id="div-heroes">
-                <h3>Heróis</h3>
-                <ul id="ul-heroes">
-                    <li><input type="checkbox" name="heroes" id="chk-collin"><label for="chk-collin">Collin</label></li>
-                    <li><input type="checkbox" name="heroes" id="chk-filch"><label for="chk-filch">Filch</label></li>
-                    <li><input type="checkbox" name="heroes" id="chk-lilly"><label for="chk-lilly">Lilly</label></li>
-                    <li><input type="checkbox" name="heroes" id="chk-maginos"><label for="chk-maginos">Maginos</label></li>
-                    <li><input type="checkbox" name="heroes" id="chk-nez"><label for="chk-nez">Nez</label></li>
-                    <li><input type="checkbox" name="heroes" id="chk-tilda"><label for="chk-tilda">Tilda</label></li>
-                </ul>
+        <section class="w3-container" id="sec-fighterSelection">
+            <h2 class="w3-center">Seleção de Combatentes</h2>
+            <section class="w3-margin w3-padding w3-container">
+                <div class="w3-half w3-padding" id="div-heroes">
+                    <h3 class="w3-center">Heróis</h3>
+                    <ul class="w3-large" id="ul-heroes">
+                        <li><input type="checkbox" name="heroes" value="Collin" id="chk-collin">
+                            <label for="chk-collin">Collin</label></li>
+                        <li><input type="checkbox" name="heroes" value="Filch" id="chk-filch">
+                            <label for="chk-filch">Filch</label></li>
+                        <li><input type="checkbox" name="heroes" value="Lilly" id="chk-lilly">
+                            <label for="chk-lilly">Lilly</label></li>
+                        <li><input type="checkbox" name="heroes" value="Maginos" id="chk-maginos">
+                            <label for="chk-maginos">Maginos</label></li>
+                        <li><input type="checkbox" name="heroes" value="Nez" id="chk-nez">
+                            <label for="chk-nez">Nez</label></li>
+                        <li><input type="checkbox" name="heroes" value="Tilda" id="chk-tilda">
+                            <label for="chk-tilda">Tilda</label></li>
+                    </ul>
+                </div>
+                <div class="w3-half w3-padding" id="div-minions">
+                    <h3 class="w3-center">Lacaios</h3>
+                    <ul class="w3-large" id="ul-minions">
+                        <li><input type="checkbox" name="minions" id="chk-aranha">
+                            <label for="chk-aranha">Aranha</label></li>
+                        <li><input type="checkbox" name="minions" id="chk-baratas">
+                            <label for="chk-baratas">Baratas</label></li>
+                        <li><input type="checkbox" name="minions" id="chk-brodieA">
+                            <label for="chk-brodieA">Brodie Agarra</label></li>
+                        <li><input type="checkbox" name="minions" id="chk-brodieP">
+                            <label for="chk-brodieP">Brodie Persegue</label></li>
+                        <li><input type="checkbox" name="minions" id="chk-vurst">
+                            <label for="chk-vurst">Capitão Vurst</label></li>
+                        <li><input type="checkbox" name="minions" id="chk-centopeia">
+                            <label for="chk-centopeia">Centopeia de Caverna</label></li>
+                        <li><input type="checkbox" name="minions" id="chk-ratElite">
+                            <label for="chk-ratElite">Guerreiros de Elite</label></li>
+                        <li><input type="checkbox" name="minions" id="chk-rat">
+                            <label for="chk-rat">Guerreiros Ratazanas</label></li>
+                        <li><input type="checkbox" name="minions" id="chk-skitter">
+                            <label for="chk-skitter">Skitter-Clak</label></li>
+                        <li><input type="checkbox" name="minions" id="chk-chamadoVanestra">
+                            <label for="chk-chamadoVanestra">Chamado de Vanestra</label></li>
+                        <li><input type="checkbox" name="minions" id="chk-encantoVanestra">
+                            <label for="chk-encantoVanestra">Encanto de Vanestra</label></li>
+                        <li><input type="checkbox" name="minions" id="chk-ferraoVanestra">
+                            <label for="chk-ferraoVanestra">Ferrão de Vanestra</label></li>
+                        <li><input type="checkbox" name="minions" id="chk-teiaVanestra">
+                            <label for="chk-teiaVanestra">Teia de Vanestra</label></li>
+                    </ul>
+                </div>
+            </section>
+            <div class="w3-center w3-margin">
+                <button class="w3-button w3-blue w3-round-large" id="btn-initiative">Rolar iniciativa</button>
+
             </div>
-            <div id="div-minions">
-                <h3>Lacaios</h3>
-                <ul id="ul-minions">
-                    <li><input type="checkbox" name="minions" id="chk-ratElite"><label for="chk-ratElite">Guerreiros de Elite</label></li>
-                    <li><input type="checkbox" name="minions" id="chk-rat"><label for="chk-rat">Guerreiros Ratazanas</label></li>
-                    <li><input type="checkbox" name="minions" id="chk-brodieA"><label for="chk-brodieA">Brodie Agarra</label></li>
-                    <li><input type="checkbox" name="minions" id="chk-brodieP"><label for="chk-brodieP">Brodie Persegue</label></li>
-                    <li><input type="checkbox" name="minions" id="chk-skitter"><label for="chk-skitter">Skitter-Clak</label></li>
-                    <li><input type="checkbox" name="minions" id="chk-centopeia"><label for="chk-centopeia">Centopeia de Caverna</label></li>
-                    <li><input type="checkbox" name="minions" id="chk-aranha"><label for="chk-aranha">Aranha</label></li>
-                    <li><input type="checkbox" name="minions" id="chk-vurst"><label for="chk-vurst">Capitão Vurst</label></li>
-                    <li><input type="checkbox" name="minions" id="chk-teiaVanestra"><label for="chk-teiaVanestra">Teia de Vanestra</label></li>
-                    <li><input type="checkbox" name="minions" id="chk-encantoVanestra"><label for="chk-encantoVanestra">Encanto de Vanestra</label></li>
-                    <li><input type="checkbox" name="minions" id="chk-chamadoVanestra"><label for="chk-chamadoVanestra">Chamado de Vanestra</label></li>
-                    <li><input type="checkbox" name="minions" id="chk-ferraoVanestra"><label for="chk-ferraoVanestra">Ferrão de Vanestra</label></li>
-                </ul>
-            </div>
-            <button>Rolar iniciativa</button>
         </section>
 
         <!-- INICIATIVA -->
-        <section id="sec-initiative">
-            <h2>Iniciativa</h2>
-            <ol id="ol-initiative"></ol>
+        <section class="w3-container" id="sec-initiative">
+            <div class="w3-card w3-padding initiative">
+                <h2 class="w3-center">Iniciativa</h2>
+                <ol id="ol-initiative"></ol>
+                <div id="emptyList" style="text-align: center; margin: 20px;">Lista vazia</div>
+            </div>
         </section>
     </main>
     <footer></footer>
