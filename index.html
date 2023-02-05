@@ -9,8 +9,15 @@
     <!-- CSS -->
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <style>
+        body{
+            background-color: #0D1117;
+            color: #F0F6FC;
+        }
         li, label{
             padding: 0.3rem;
+        }
+        section{
+            height: 100%;
         }
         .initiative{
             margin-left: auto;
@@ -24,8 +31,19 @@
             margin-right: auto;
             width: fit-content;
         }
+        .w3-blue{
+            background-color: #3178C6!important;
+        }
+        .w3-border{
+            border-color: #21262D!important;
+        }
         .avatar{width: 85px!important;}
         button{width: 44%;}
+        #div-heroes, #div-heroes-list{
+            height: 663px;
+        }
+
+        /* Responsividade */
         @media only screen and (max-width: 600px){
             .w3-button.w3-xlarge{font-size: large!important;}
         }
@@ -34,6 +52,7 @@
     <!-- JS -->
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
     <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/712627e99f.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header class="w3-center">
@@ -45,100 +64,106 @@
             <h2 class="w3-center">Seleção de Combatentes</h2>
             <section class="w3-margin w3-padding w3-container">
                 <!-- HERÓIS -->
-                <div class="w3-half w3-padding" id="div-heroes">
-                    <h3 class="w3-center w3-xxlarge">Heróis</h3>
-                    <ul class="w3-xlarge w3-ul" id="ul-heroes">
-                        <li class="w3-bar">
-                            <img src="src/collin.png" class="w3-bar-item w3-circle avatar" alt="">
-                            <div class="w3-bar-item">
-                                <input type="checkbox" name="heroes" value="Collin" id="chk-collin" class="w3-check">
-                                <label for="chk-collin">Collin</label>
-                            </div>
-                        </li>
-                        <li class="w3-bar">
-                            <img src="src/filch.png" class="w3-bar-item w3-circle avatar" alt="">
-                            <div class="w3-bar-item">
-                                <input type="checkbox" name="heroes" value="Filch" id="chk-filch" class="w3-check">
-                                <label for="chk-filch">Filch</label>
-                            </div>
-                        </li>
-                        <li class="w3-bar">
-                            <img src="src/lilly.png" class="w3-bar-item w3-circle avatar" alt="">
-                            <div class="w3-bar-item">
-                                <input type="checkbox" name="heroes" value="Lilly" id="chk-lilly" class="w3-check">
-                                <label for="chk-lilly">Lilly</label>
-                            </div>
-                        </li>
-                        <li class="w3-bar">
-                            <img src="src/maginos.png" class="w3-bar-item w3-circle avatar" alt="">
-                            <div class="w3-bar-item">
-                                <input type="checkbox" name="heroes" value="Maginos" id="chk-maginos" class="w3-check">
-                                <label for="chk-maginos">Maginos</label>
-                            </div>
-                        </li>
-                        <li class="w3-bar">
-                            <img src="src/nez.png" class="w3-bar-item w3-circle avatar" alt="">
-                            <div class="w3-bar-item">
-                                <input type="checkbox" name="heroes" value="Nez" id="chk-nez" class="w3-check">
-                                <label for="chk-nez">Nez</label>
-                            </div>
-                        </li>
-                        <li class="w3-bar">
-                            <img src="src/tilda.png" class="w3-bar-item w3-circle avatar" alt="">
-                            <div class="w3-bar-item">
-                                <input type="checkbox" name="heroes" value="Tilda" id="chk-tilda" class="w3-check">
-                                <label for="chk-tilda">Tilda</label>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
+                <section class="w3-half w3-padding" id="div-heroes">
+                    <div class="w3-padding w3-border" id="div-heroes-list">
+                        <h3 class="w3-center w3-xxlarge">Heróis</h3>
+                        <ul class="w3-xlarge w3-ul" id="ul-heroes">
+                            <li class="w3-bar">
+                                <img src="src/collin.png" class="w3-bar-item w3-circle avatar" alt="">
+                                <div class="w3-bar-item">
+                                    <input type="checkbox" name="heroes" value="Collin" id="chk-collin" class="w3-check">
+                                    <label for="chk-collin">Collin</label>
+                                </div>
+                            </li>
+                            <li class="w3-bar">
+                                <img src="src/filch.png" class="w3-bar-item w3-circle avatar" alt="">
+                                <div class="w3-bar-item">
+                                    <input type="checkbox" name="heroes" value="Filch" id="chk-filch" class="w3-check">
+                                    <label for="chk-filch">Filch</label>
+                                </div>
+                            </li>
+                            <li class="w3-bar">
+                                <img src="src/lilly.png" class="w3-bar-item w3-circle avatar" alt="">
+                                <div class="w3-bar-item">
+                                    <input type="checkbox" name="heroes" value="Lilly" id="chk-lilly" class="w3-check">
+                                    <label for="chk-lilly">Lilly</label>
+                                </div>
+                            </li>
+                            <li class="w3-bar">
+                                <img src="src/maginos.png" class="w3-bar-item w3-circle avatar" alt="">
+                                <div class="w3-bar-item">
+                                    <input type="checkbox" name="heroes" value="Maginos" id="chk-maginos" class="w3-check">
+                                    <label for="chk-maginos">Maginos</label>
+                                </div>
+                            </li>
+                            <li class="w3-bar">
+                                <img src="src/nez.png" class="w3-bar-item w3-circle avatar" alt="">
+                                <div class="w3-bar-item">
+                                    <input type="checkbox" name="heroes" value="Nez" id="chk-nez" class="w3-check">
+                                    <label for="chk-nez">Nez</label>
+                                </div>
+                            </li>
+                            <li class="w3-bar">
+                                <img src="src/tilda.png" class="w3-bar-item w3-circle avatar" alt="">
+                                <div class="w3-bar-item">
+                                    <input type="checkbox" name="heroes" value="Tilda" id="chk-tilda" class="w3-check">
+                                    <label for="chk-tilda">Tilda</label>
+                                </div>
+                            </li>
+                        </ul>
+
+                    </div>
+                </section>
 
                 <!-- LACAIOS -->
-                <div class="w3-half w3-padding" id="div-minions">
-                    <h3 class="w3-center w3-xxlarge">Lacaios</h3>
-                    <ul class="w3-large w3-ul" id="ul-minions">
-                        <li><input type="checkbox" name="minions" value="Aranha" id="chk-aranha">
-                            <label for="chk-aranha">Aranha</label></li>
-                        <li><input type="checkbox" name="minions" value="Baratas" id="chk-baratas">
-                            <label for="chk-baratas">Baratas</label></li>
-                        <li><input type="checkbox" name="minions" value="Brodie Agarra" id="chk-brodieA">
-                            <label for="chk-brodieA">Brodie Agarra</label></li>
-                        <li><input type="checkbox" name="minions" value="Brodie Persegue" id="chk-brodieP">
-                            <label for="chk-brodieP">Brodie Persegue</label></li>
-                        <li><input type="checkbox" name="minions" value="Capitão Vurst" id="chk-vurst">
-                            <label for="chk-vurst">Capitão Vurst</label></li>
-                        <li><input type="checkbox" name="minions" value="Centopeia de Caverna" id="chk-centopeia">
-                            <label for="chk-centopeia">Centopeia de Caverna</label></li>
-                        <li><input type="checkbox" name="minions" value="Guerreiros de Elite" id="chk-ratElite">
-                            <label for="chk-ratElite">Guerreiros de Elite</label></li>
-                        <li><input type="checkbox" name="minions" value="Guerreiros Ratazanas" id="chk-rat">
-                            <label for="chk-rat">Guerreiros Ratazanas</label></li>
-                        <li><input type="checkbox" name="minions" value="Skitter-Clak" id="chk-skitter">
-                            <label for="chk-skitter">Skitter-Clak</label></li>
-                        <li><input type="checkbox" name="minions" value="Chamado de Vanestra" id="chk-chamadoVanestra">
-                            <label for="chk-chamadoVanestra">Chamado de Vanestra</label></li>
-                        <li><input type="checkbox" name="minions" value="Encanto de Vanestra" id="chk-encantoVanestra">
-                            <label for="chk-encantoVanestra">Encanto de Vanestra</label></li>
-                        <li><input type="checkbox" name="minions" value="Ferrão de Vanestra" id="chk-ferraoVanestra">
-                            <label for="chk-ferraoVanestra">Ferrão de Vanestra</label></li>
-                        <li><input type="checkbox" name="minions" value="Teia de Vanestra" id="chk-teiaVanestra">
-                            <label for="chk-teiaVanestra">Teia de Vanestra</label></li>
-                    </ul>
-                </div>
+                <section class="w3-half w3-padding" id="div-minions">
+                    <div class="w3-border w3-padding">
+                        <h3 class="w3-center w3-xxlarge">Lacaios</h3>
+                        <ul class="w3-large w3-ul" id="ul-minions">
+                            <li><input type="checkbox" name="minions" value="Aranha" id="chk-aranha">
+                                <label for="chk-aranha">Aranha</label></li>
+                            <li><input type="checkbox" name="minions" value="Baratas" id="chk-baratas">
+                                <label for="chk-baratas">Baratas</label></li>
+                            <li><input type="checkbox" name="minions" value="Brodie Agarra" id="chk-brodieA">
+                                <label for="chk-brodieA">Brodie Agarra</label></li>
+                            <li><input type="checkbox" name="minions" value="Brodie Persegue" id="chk-brodieP">
+                                <label for="chk-brodieP">Brodie Persegue</label></li>
+                            <li><input type="checkbox" name="minions" value="Capitão Vurst" id="chk-vurst">
+                                <label for="chk-vurst">Capitão Vurst</label></li>
+                            <li><input type="checkbox" name="minions" value="Centopeia de Caverna" id="chk-centopeia">
+                                <label for="chk-centopeia">Centopeia de Caverna</label></li>
+                            <li><input type="checkbox" name="minions" value="Guerreiros de Elite" id="chk-ratElite">
+                                <label for="chk-ratElite">Guerreiros de Elite</label></li>
+                            <li><input type="checkbox" name="minions" value="Guerreiros Ratazanas" id="chk-rat">
+                                <label for="chk-rat">Guerreiros Ratazanas</label></li>
+                            <li><input type="checkbox" name="minions" value="Skitter-Clak" id="chk-skitter">
+                                <label for="chk-skitter">Skitter-Clak</label></li>
+                            <li><input type="checkbox" name="minions" value="Chamado de Vanestra" id="chk-chamadoVanestra">
+                                <label for="chk-chamadoVanestra">Chamado de Vanestra</label></li>
+                            <li><input type="checkbox" name="minions" value="Encanto de Vanestra" id="chk-encantoVanestra">
+                                <label for="chk-encantoVanestra">Encanto de Vanestra</label></li>
+                            <li><input type="checkbox" name="minions" value="Ferrão de Vanestra" id="chk-ferraoVanestra">
+                                <label for="chk-ferraoVanestra">Ferrão de Vanestra</label></li>
+                            <li><input type="checkbox" name="minions" value="Teia de Vanestra" id="chk-teiaVanestra">
+                                <label for="chk-teiaVanestra">Teia de Vanestra</label></li>
+                        </ul>
+
+                    </div>
+                </section>
             </section>
 
             <!-- BOTÕES -->
             <div class="w3-center w3-block">
-                <button class="w3-button w3-blue w3-round-large w3-padding-large w3-xlarge w3-margin" id="btn-initiative">Rolar iniciativa</button>
-                <button class="w3-button w3-gray w3-round-large w3-padding-large w3-xlarge w3-margin" id="btn-limpar">Limpar</button>
+                <button class="w3-button w3-blue w3-round-large w3-padding-large w3-xlarge w3-margin" id="btn-initiative"><i class="fa-solid fa-dice"></i> Rolar iniciativa</button>
+                <button class="w3-button w3-red w3-round-large w3-padding-large w3-xlarge w3-margin" id="btn-limpar"><i class="fa-solid fa-xmark"></i> Limpar</button>
             </div>
         </section>
 
         <!-- INICIATIVA -->
         <section class="w3-container" id="sec-initiative">
-            <div class="w3-card w3-padding initiative">
+            <div class="w3-border w3-round-large w3-padding initiative">
                 <h2 class="w3-center">Iniciativa</h2>
-                <ol class="w3-border" id="ol-initiative"></ol>
+                <ol id="ol-initiative"></ol>
                 <div id="emptyList" style="text-align: center; margin: 20px;">Lista vazia</div>
             </div>
         </section>
